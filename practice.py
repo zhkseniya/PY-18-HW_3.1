@@ -30,14 +30,12 @@ def translate_it(text, file_language, translate_language = "ru"):
     return ' '.join(response.get('text', []))
 
 def read_file(file_name):
-
     with open(file_name, "r") as file_read:
         file_for_translate = file_read.read()
 
     return file_for_translate
 
 def write_file(file_name, text_translate):
-
     with open(file_name, "a") as file_write:
         file_write.write(text_translate)
 
